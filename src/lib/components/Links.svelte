@@ -1,22 +1,10 @@
 <script lang="ts">
-	import Youtubemusic from '$lib/components/icons/youtubemusic.svelte';
-	import Applepodcasts from '$lib/components/icons/applepodcasts.svelte';
 	import Email from '$lib/components/icons/email.svelte';
 	import Rss from '$lib/components/icons/rss.svelte';
 	import { base } from '$app/paths';
 	import Patreon from '$lib/components/icons/patreon.svelte';
 
 	const LINKS = [
-		{
-			title: 'Youtube Music',
-			icon: Youtubemusic,
-			url: 'https://youtube.com'
-		},
-		{
-			title: 'Apple Podcasts',
-			icon: Applepodcasts,
-			url: 'https://podcasts.apple.com'
-		},
 		{
 			title: 'Patreon',
 			icon: Patreon,
