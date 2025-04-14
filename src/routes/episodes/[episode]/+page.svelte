@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import Links from '$lib/components/Links.svelte';
+	import { getFormattedDate } from '$lib/date';
 	import type { PageData } from './$types';
 
 	type Props = {
@@ -14,6 +15,7 @@
 	<div class="episode__title-wrapper">
 		<p class="episode__number">Episode: {data.meta.number}</p>
 		<h1 class="episode__title">{data.meta.title}</h1>
+		<time class="episode__date" datetime={data.meta.date}>{getFormattedDate(data.meta.date)}</time>
 	</div>
 	<Links />
 
@@ -30,6 +32,10 @@
 	}
 	.episode__number {
 		color: var(--color--secondary);
+	}
+
+	.episode__date {
+		font-weight: 400;
 	}
 
 	.episode__audio {

@@ -12,9 +12,10 @@
 	--text--h3: 400 20px/1.5 var(--font--main);
 	--text--subtitle: 300 italic 16px/1.5 var(--font--main);
 	--text--p: 300 16px/1.5 var(--font--main);
+	--text--date: 300 14px/1.5 var(--font--main);
 
 	--color--primary: #480008;
-	--color--secondary: #8A6F48;
+	--color--secondary: #8a6f48;
 	--color--white: #ffffff;
 	--color--black: #00000;
 	--color--text: #454545;
@@ -35,10 +36,10 @@ body {
 }
 
 body {
-	min-width: 376px;
-	font: var(--text--p);
-	color: var(--color--text);
 	background-color: var(--color--white);
+	min-width: 376px;
+	color: var(--color--text);
+	font: var(--text--p);
 }
 
 h1,
@@ -46,33 +47,40 @@ h2,
 h3,
 h4,
 h5,
-h6, p {
+h6,
+p {
 	margin: 0;
 	padding: 0;
 }
 
 h1 {
-	font: var(--text--h1);
 	color: var(--color--primary);
+	font: var(--text--h1);
 }
 
 h2 {
-	font: var(--text--h2);
 	color: var(--color--secondary);
+	font: var(--text--h2);
 }
 
 h3 {
 	font: var(--text--h3);
 }
 
-a {
-	color: var(--color--secondary);
-	opacity: 1;
-	transition: opacity 0.3s ease-in-out;
+time {
+	color: var(--color--text);
+	font: var(--text--date);
 }
 
-a:hover, a:focus-visible {
-opacity: 0.7;
+a {
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+	color: var(--color--secondary);
+}
+
+a:hover,
+a:focus-visible {
+	opacity: 0.7;
 }
 a:active {
 	opacity: 0.5;

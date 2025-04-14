@@ -68,6 +68,7 @@
 	.image {
 		box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2);
 		border-radius: 20px;
+		width: 100%;
 	}
 
 	.list {

@@ -23,7 +23,7 @@
 <style>
 	.page-content {
 		margin: 0 auto;
-		padding: 130px 0 100px;
+		padding: 130px 20px 100px;
 		max-width: 705px;
 	}
 	.page-footer {

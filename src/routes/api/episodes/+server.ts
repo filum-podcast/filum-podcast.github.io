@@ -18,7 +18,7 @@ export const GET: RequestHandler = async () => {
 	const episodes = data
 		.sort((a, b) => b.number - a.number)
 		.map((el) => {
-			return { title: el.title, number: el.number };
+			return { title: el.title, number: el.number, date: el.date };
 		});
 
 	return json(episodes);
