@@ -8,6 +8,10 @@
 	let { children }: Props = $props();
 </script>
 
+<svelte:head>
+	<title>Filum Podcast</title>
+</svelte:head>
+
 <main class="page-content">
 	{@render children()}
 
