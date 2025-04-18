@@ -20,7 +20,9 @@ const config = {
 		paths: {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		},
-		prerender: { entries: ['/', '/api/episodes', '/episodes', '/episodes/1', '/episodes/2'] }
+		prerender: {
+			entries: ['/', '/api/episodes', '/episodes', '/episodes/1', '/episodes/2', '/episodes/3']
+		}
 	},
 	extensions: ['.svelte', '.md']
 };
