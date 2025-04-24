@@ -38,7 +38,7 @@ const getEpisodeXml = async (episode: EpisodeType) => {
       <title>${episode.title}</title>
       <pubDate>${episode.date}</pubDate>
       <description><![CDATA[ ${episode.description} ]]></description>
-      <guid isPermaLink="true">${episode.audio}</guid>
+      <guid isPermaLink="true">${siteUrl}/${episode.audio}</guid>
       <enclosure type="audio/mpeg" url="${siteUrl}/${episode.audio}" length="${fileSize}"/>
       <itunes:episode>${episode.number}</itunes:episode>
       <itunes:duration>${duration}</itunes:duration>
