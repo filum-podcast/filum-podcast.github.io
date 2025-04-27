@@ -1,24 +1,41 @@
 <script lang="ts">
-	import Email from '$lib/components/icons/email.svelte';
-	import Rss from '$lib/components/icons/rss.svelte';
 	import { base } from '$app/paths';
-	import Patreon from '$lib/components/icons/patreon.svelte';
+	import EmailIcon from '$lib/components/icons/email.svelte';
+	import RssIcon from '$lib/components/icons/rss.svelte';
+	import PatreonIcon from '$lib/components/icons/patreon.svelte';
+	import ApplePodcastIcon from '$lib/components/icons/applepodcasts.svelte';
+	import SpotifyIcon from '$lib/components/icons/spotify.svelte';
 
 	const LINKS = [
 		{
+			title: 'Apple Podcast',
+			icon: ApplePodcastIcon,
+			url: 'https://podcasts.apple.com/us/podcast/filum-embroidery-podcast/id1809848488',
+			external: true
+		},
+		{
+			title: 'Spotify',
+			icon: SpotifyIcon,
+			url: 'https://open.spotify.com/show/3IZll2qfRy50C9aUvP6MTF',
+			external: true
+		},
+		{
 			title: 'Patreon',
-			icon: Patreon,
-			url: 'https://www.patreon.com/mashareprintseva?utm_campaign=creatorshare_creator'
+			icon: PatreonIcon,
+			url: 'https://www.patreon.com/mashareprintseva?utm_campaign=creatorshare_creator',
+			external: true
 		},
 		{
 			title: 'Email',
-			icon: Email,
-			url: 'mailto:mashareprintseva@gmail.com?subject=Hello!'
+			icon: EmailIcon,
+			url: 'mailto:mashareprintseva@gmail.com?subject=Hello!',
+			external: false
 		},
 		{
 			title: 'RSS Feed',
-			icon: Rss,
-			url: `${base}/feed.xml`
+			icon: RssIcon,
+			url: `${base}/feed.xml`,
+			external: false
 		}
 	];
 </script>
@@ -28,7 +45,17 @@
 	<ul class="links__list">
 		{#each LINKS as item}
 			<li class="links__item item">
-				<a class="item__link" href={item.url} aria-label={item.title}><item.icon /></a>
+				{#if item.external}
+					<a
+						class="item__link"
+						href={item.url}
+						aria-label={item.title}
+						target="_blank"
+						rel="noopener noreferrer"><item.icon /></a
+					>
+				{:else}
+					<a class="item__link" href={item.url} aria-label={item.title}><item.icon /></a>
+				{/if}
 			</li>
 		{/each}
 	</ul>

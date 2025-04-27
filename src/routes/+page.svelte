@@ -18,6 +18,7 @@
 	<h1 class="title">Filum Podcast</h1>
 	<p class="subtitles">Where stories are woven into every episode</p>
 </div>
+
 <Links />
 
 <section class="content-section">
