@@ -4,7 +4,7 @@ import { parseFile } from 'music-metadata';
 import type { EpisodeType } from '$lib/types';
 import { SITE_URL as siteUrl } from '$env/static/private';
 
-const feedTitle = 'Filum - Embroidery Podcast';
+const feedTitle = 'Filum - Fiber Art Podcast';
 const feedAuthor = 'Masha Reprintseva';
 const feedDescription =
 	'I share stories that inspire and reveal unique experiences of creators, makers and lovers of all kinds.';
