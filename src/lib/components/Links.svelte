@@ -71,7 +71,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 51px;
+		gap: clamp(10px, 9%, 51px);
 		margin: 0;
 		padding: 0;
 		list-style: none;
