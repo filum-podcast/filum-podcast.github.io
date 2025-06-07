@@ -8,3 +8,5 @@ export type EpisodeType = {
 	cover?: string;
 	preview: string;
 };
+
+export type FeedType = Record<string, { metadata: EpisodeType }>;

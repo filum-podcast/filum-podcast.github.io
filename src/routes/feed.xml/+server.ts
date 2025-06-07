@@ -1,13 +1,20 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { getXml } from '$lib/xml';
-import type { EpisodeType } from '$lib/types';
+import type { EpisodeType, FeedType } from '$lib/types';
 
 export const prerender = true;
 
 export const GET: RequestHandler = async () => {
 	const episodes: EpisodeType[] = [];
 
-	const paths = import.meta.glob('/src/episodes/*.md', { eager: true });
+	const pathData = import.meta.glob('/src/episodes/*.md', { eager: true }) as FeedType;
+
+	const paths = Object.entries(pathData)
+		.sort((a, b) => a[1].metadata.number - b[1].metadata.number)
+		.reduce((acc: FeedType, [key, value]) => {
+			acc[key] = value;
+			return acc;
+		}, {});
 
 	for (const path in paths) {
 		const file = paths[path];
