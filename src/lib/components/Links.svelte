@@ -5,6 +5,7 @@
 	import PatreonIcon from '$lib/components/icons/patreon.svelte';
 	import ApplePodcastIcon from '$lib/components/icons/applepodcasts.svelte';
 	import SpotifyIcon from '$lib/components/icons/spotify.svelte';
+	import YoutubeMusicIcon from '$lib/components/icons/youtubemusic.svelte';
 
 	const LINKS = [
 		{
@@ -17,6 +18,12 @@
 			title: 'Spotify',
 			icon: SpotifyIcon,
 			url: 'https://open.spotify.com/show/3IZll2qfRy50C9aUvP6MTF',
+			external: true
+		},
+		{
+			title: 'Youtube',
+			icon: YoutubeMusicIcon,
+			url: 'https://www.youtube.com/playlist?list=PLEf7VAwo07YNH3L4nsgSY9IdaSVTVdbMZ',
 			external: true
 		},
 		{
@@ -69,6 +76,7 @@
 	}
 	.links__list {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		gap: clamp(10px, 9%, 51px);
@@ -79,5 +87,17 @@
 
 	.item__link {
 		display: grid;
+	}
+
+	@media (width <= 498px) {
+		.links__list {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-auto-rows: min-content;
+			align-items: center;
+			justify-items: center;
+			gap: 40px 20px;
+			padding: 20px;
+		}
 	}
 </style>
