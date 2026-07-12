@@ -47,7 +47,8 @@ const config = {
 				'/episodes/20',
 				'/episodes/21',
 				'/episodes/22',
-				'/episodes/23'
+				'/episodes/23',
+				'/episodes/24'
 			]
 		}
 	},
